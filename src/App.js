@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify'; // ✅ Import it here
+import 'react-toastify/dist/ReactToastify.css'; // ✅ Import CSS here
 import SignupForm from './Auth/SignupForm';
 import SigninForm from './Auth/SigninForm';
 import Employee from './Pages/employeedash';
@@ -33,6 +35,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <ToastContainer />
         <Routes>
           <Route path='/' element={<SignupForm />}></Route>
           <Route path='/Login' element={<SigninForm />}></Route>
